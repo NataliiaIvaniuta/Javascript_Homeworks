@@ -11,21 +11,10 @@ let person = {
 };
 
 function cloneObj (person) {
-    let clone = {};
-    for (let propertyName in person) {
-        if (typeof person[propertyName] === "object") {
-            clone[propertyName] = cloneObj(person[propertyName]);
-        } else if (Array.isArray(person[propertyName])) {
-            for (let arrayElement of person[propertyName]) {
-                if(Array.isArray(arrayElement) || typeof arrayElement === 'object'){
-                    clone[propertyName].push(cloneObj(arrayElement));
-                } else {
-                    clone[propertyName].push(arrayElement);
-                }
-            }
-        } else {
-            clone[propertyName] = person[propertyName];
-        }
+    let propertyName;
+    let clone =Array.isArray(person) ? []:{};
+    for (propertyName in person) {
+        clone[propertyName] = (typeof person[propertyName] === "object") ? cloneObj(person[propertyName]) : person[propertyName];
     }
     return clone;
 }
