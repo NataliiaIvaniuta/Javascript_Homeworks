@@ -6,14 +6,7 @@ document.body.style.fontSize='20px';
 document.body.style.textIndent='20px';
 
 function showArrayList (someArray) {
-    let arrList = [];
-
-    for (let i = 0; i < someArray.length; i++) {
-        arrList[i] = someArray[i];
-    }
-    console.log(arrList);
-
-    const mapArray = `<ul> ${arrList.map(item => `<li> ${item}</li>`)} </ul>`;
+    const mapArray = `<ul> ${someArray.map(item => `<li> ${item}</li>`)} </ul>`;
 
     let splitAndJoin = mapArray.split(',').join(' ');
     document.getElementById('container').innerHTML = splitAndJoin;
