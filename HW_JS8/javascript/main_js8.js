@@ -13,7 +13,7 @@ box.appendChild(input);
 box.addEventListener('focus', drawBorder());
 box.removeEventListener('blur', drawBorder());
 input.onblur = () => {
-    if (input.value < 0 || isNaN(input.value)) {
+    if (input.value < 0 || isNaN(input.value)||input.value==="") {
         input.style.border = '2px dotted red';
         box.appendChild(message);
     } else {
