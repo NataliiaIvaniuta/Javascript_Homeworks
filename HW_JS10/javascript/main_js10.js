@@ -24,16 +24,14 @@ let submit = document.getElementsByClassName('btn')[0];
 const message = document.createElement('p');
 message.innerText = 'The passwords do not match';
 message.style.color = 'red';
-//prevent default reload
-submit.addEventListener('click', (ev) => {
-    ev.preventDefault()
-});
 //compare inputs
-submit.addEventListener('click', () => {
-    if (inputPswrd.value === confirmPswrd.value) {
-        alert('Welcome!')
-    } else if (inputPswrd.value === null || confirmPswrd.value === null || inputPswrd.value === "" || confirmPswrd.value === "") {
+submit.addEventListener('click', (ev) => {
+    ev.preventDefault(); //prevent default reload
+    if (!inputPswrd.value || !confirmPswrd.value) {
         alert('Please specify the password')
+    } else if
+        (inputPswrd.value === confirmPswrd.value) {
+        alert('Welcome!')
     } else {
         document.querySelector('button').before(message);
     }
