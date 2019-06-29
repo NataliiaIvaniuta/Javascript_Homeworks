@@ -33,6 +33,7 @@ function checkExcellence(student) {
         alert("Студент переведен на следующий курс");
     } return student
 };
+//check average grades
 function checkAverage (student) {
     let totalGrades = 0;
     let totalSubjects = 0;
