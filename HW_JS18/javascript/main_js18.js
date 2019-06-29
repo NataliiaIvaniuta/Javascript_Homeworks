@@ -1,36 +1,78 @@
 "use strict";
-const Student = {};
-Student.name = prompt('What is your name?');
-Student.surname = prompt('What is your last name?');
-// console.log(Student);
 
-Student.tabel = {};
-const overview = {};
-let subject;
-let badGrades = 0;
-let totalGrades = 0;
-let totalSubjects = 0;
+// create student
+function createStudent() {
+    const student = {
+        name: (checkInput('What is your name?')),
+        surname: (checkInput('What is your last name?'))
+    };
+    student.tabel = {};
+    return student;
+};
 
-do {
-    subject = prompt('Please indicate a subject');
-    if (subject) {
-        const grade = +prompt(`What is your mark in this ${subject}?`);
-        overview[subject] = grade;
-        if (grade < 4) {
-            badGrades++;
+//create tabel
+function createTabel (student) {
+    let subject;
+    do {
+        subject = prompt('Please indicate a subject');
+        if (subject || subject !== null) {
+            student["tabel"][subject] = checkGrades();
         }
-        totalSubjects++;
-        totalGrades += grade;
+    } while (subject);
+    return student;
+};
+
+//passed or not
+function checkExcellence(student) {
+    let badGrades = 0;
+    for (let subject in student.tabel) {
+        if (student.tabel[subject] <= 4)
+            badGrades++;
     }
-} while (subject);
+    if (badGrades === 0) {
+        alert("Студент переведен на следующий курс");
+    } return student
+};
+function checkAverage (student) {
+    let totalGrades = 0;
+    let totalSubjects = 0;
+    for (let [subject, grade] of Object.entries(student.tabel)) {
+        totalGrades += grade;
+        totalSubjects++;
+    }
+    if ((totalGrades / totalSubjects) > 7) {
+        alert('Студенту назначена стипендия')
+    } else {
+        alert('Study better!')
+    }
+    return student;
+};
 
-Student.tabel = overview;
-if (badGrades === 0) {
-    alert("Студент переведен на следующий курс")
-} else {
-    alert('Учись лучше!)')
-}
-if (totalGrades / totalSubjects > 7) {
-    alert('Студенту назначена стипендия')
-}
+//check grades' input
+const checkGrades=(grade)=> {
+    grade = +prompt(`What is your mark in this subject?`);
+    if (grade < 1 || grade > 12 || !grade || isNaN(grade)) {
+        grade = +prompt(`What is your mark in this subject?`)
+    }
+    return grade;
+};
 
+//check name/surname input
+function checkInput(ask) {
+    let input;
+    do {
+        if (!input) {
+            input = prompt(ask)
+        }
+    }
+    while (!(input));
+    return input;
+};
+
+//
+const newStudent = createStudent();
+const tabel=createTabel(newStudent);
+checkAverage(newStudent);
+checkExcellence(newStudent);
+console.log(newStudent.tabel);
+console.log(tabel);
