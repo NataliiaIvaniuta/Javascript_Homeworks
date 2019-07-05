@@ -1,0 +1,181 @@
+.container {width: 1480px;
+    margin: 0 auto;
+}
+
+.toplink {
+    background-color: white;
+    text-transform: capitalize;
+    font-size: 80px;
+    margin: 60px 0 45px 0;
+}
+
+.logo {
+    color: black;
+    text-decoration: none;}
+
+.blue {
+    color: #4bcaff;
+    margin-left: 0;                   /*отмена отступа после.*/
+    text-transform: none;}             /*отмена капитализации после точки*/
+
+.logo:hover {text-decoration: underline;}
+
+.horizontalmenu {
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-top: 45px;
+    font-size: 24px;
+    text-transform: capitalize;
+    max-width: 1280px;
+    height: 69px;}
+
+.horizontalmenu a {
+    display: inline;
+    padding: 25px 40px;
+    text-decoration: none;
+    background-color: #35444f;
+    color: white;
+}
+.horizontalmenu .left { padding-left: 200px;}
+.horizontalmenu .right {padding-right: 190px;}
+.horizontalmenu a:hover {background-color: #222f3a;}
+
+.central {
+    width: 1280px;
+    margin-left: 100px;
+    margin-right: 100px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.sidemenu {
+    display: inline-block;
+    font-size: 30px;
+    text-transform: capitalize;
+    border: 1px solid #35444f;
+    width: 25%;
+    vertical-align: top;
+}
+
+.sidemenu a {
+    display: block;
+    line-height: 81px;
+    text-decoration: none;
+    color: black;
+    padding-left: 44px;
+}
+
+.sidemenu a:hover {
+    background-color: #dbdbdb;
+    text-indent: 20px;
+    font-weight: bold;}
+
+.body {
+    overflow: hidden;
+    display: inline-block;
+    width: 70%;
+    margin-left: 50px;
+    margin-right: 0;
+}
+
+.ramda {
+    text-align: center;
+    padding: 75px 280px;
+    border: 1px solid black;
+}
+
+.imgramda {
+    width: 320px;
+    height: 381px;
+}
+
+.text {
+    font-size: 18px;
+    color: #2c2c2c;
+    margin: 50px 40px 30px 30px;
+    text-align: left;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.text p {margin-bottom: 30px;}
+
+.bottombar {
+    display: inline-block;
+    margin: 50px 100px 30px;
+    background-color: #b4b7ba;
+    text-transform: capitalize;
+    max-height: 69px;
+    text-align: center;
+}
+
+.bottombar a {
+    text-decoration: none;
+    font-size: 28px;
+    color: #0c1927;
+    line-height: 69px;
+    padding-left: 44px;
+}
+
+.bottombar a:hover {
+    text-decoration: underline;
+    color:#3181a6;
+}
+.copyright     {
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 24px;
+    padding-left: 118px;
+    padding-right: 34px;
+}
+/*///new theme////*/
+body.dark {
+    background-color: rgb(5, 39, 15);
+    color: #fff;
+}
+body.dark .toplink {
+    background-color: transparent;
+}
+
+body.dark p {
+    color: #8b8400;
+}
+body.dark .horizontalmenu a{
+    background-color: #2c8b58;
+    color: #02271d;
+}
+body.dark .logo{
+    color: #ffbc4e;
+}
+body.dark .blue{
+    color: #236b07;
+}
+body.dark .horizontalmenu a:hover{
+    background-color: #8b7c39;
+    color: darkgreen;
+}
+
+body.dark .sidemenu,
+body.dark .ramda,
+body.dark .bottombar{
+    border: 1px solid #1d6b06;
+}
+body.dark .sidemenu a{
+    color: #1d6b06;
+}
+body.dark .sidemenu a:hover {
+    background-color: #ffbc4e;
+}
+
+body.dark .bottombar{
+    background-color: #ffbc4e;
+    color: #6b6b06;
+}
+body.dark .bottombar .copyright{
+    color: #8b8400;
+}
+
+body.dark .bottombar a:hover {
+    border-right: 1px #18ff56 solid;
+    color: #8b8400;
+}
