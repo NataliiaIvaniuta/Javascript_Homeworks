@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.wrapper {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.topheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    background: #1d2124;
+    color: rgba(255, 255, 255, 255);
+}
+
+.topheader a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 255);
+}
+
+.topheader a:hover {
+    color: #009fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+.iconbox {
+    background-color: #1a1d20;
+    padding: 20px;
+}
+
+.icon {
+    width: 27px;
+    height: 27px;
+    background-color: #1a1d20;
+    background: url('../images/css_sprites.png') -2px -50px;
+}
+
+.architect {font-size: 22px;}
+
+.menu {
+    width: 50%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.searchbox {
+    padding: 23px;
+    background-color: #171a1c;
+    cursor: pointer;
+}
+
+input {
+    display: none;
+    border-radius: 20px;
+    background-color: #bcffff;
+}
+
+.search {
+    width: 17px;
+    height: 17px;
+}
+
+.searchbox:hover input { display: inline-flex; }
+
+.searchbox:hover { color: #06a4ff;}
+
+.parallax {
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top_prlx {
+    background-image: url('../images/topbgr.jpeg');
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+}
+
+.slogan {
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.motto {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 255);
+    margin-top: 127px;
+}
+
+.offer {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.offer a {
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: capitalize;
+    width: 170px;
+    height: 55px;
+    border-radius: 5px;
+    border: none;
+    color: rgba(255, 255, 255, 255);
+}
+
+.subscribe {
+    align-items: center;
+    background-color: #89ca62;
+    margin-right: 20px;
+}
+
+.subscribe:hover {
+    transform: skewX(-15deg);
+    font-weight: bold;
+    color: darkgreen;
+}
+
+.articles {
+    align-items: center;
+    background-color: #14b9d5;
+}
+
+.articles:hover {
+    transform: skewX(15deg);
+    font-weight: bold;
+    color: #2300ff;
+}
+
+.popularposts {background-color: #f2f2f2;}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.posts {
+    height: 1030px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-evenly;
+}
+
+.posts h2 {
+    text-transform: uppercase;
+    font-size: 27px;
+    font-weight: bold;
+    color: #18b4cf;
+    text-align: center;
+    margin-top: 43px;
+    margin-bottom: 52px;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 1030px;
+    width: 100%;
+    margin-right: -30px;
+}
+
+.galleryoption {
+    width: 370px;
+    margin: 0 30px 30px 0;
+}
+
+.galleryoption text {
+    font-size: 18px;
+    color: rgba(53, 58, 61, 255);
+    font-weight: bold;
+    background-color: #fff;
+    height: 61px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.gallery text:hover {
+    text-decoration: underline #1f76ff;
+    background-color: #c8ffe3;
+}
+
+.gallery a {text-decoration: none;}
+
+.middle_prlx {background-image: url('../images/centerbgr.jpeg');}
+
+.ourclients {
+    display: flex;
+    height: 600px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.clients {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 32px;
+    text-align: center;
+    color: rgba(255, 255, 255, 255);
+}
+
+.clients::after {
+    display: block;
+    position: relative;
+    content: " ";
+    margin: 55px 0 60px;
+    height: 3px;
+    background-color: #169cb4;
+    width: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.clientlist {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-evenly;
+    align-content: baseline;
+    column-gap: 75px;
+}
+
+.JR {
+    width: 141px;
+    height: 52px;
+    background: url('../images/clientssprite.png') -2px -133px;
+}
+
+.HH {
+    width: 172px;
+    height: 42px;
+    background: url('../images/clientssprite.png') -2px -34px;
+}
+
+.DR {
+    width: 135px;
+    height: 49px;
+    background: url('../images/clientssprite.png') -2px -80px;
+}
+
+.NP {
+    width: 207px;
+    height: 28px;
+    background: url('../images/clientssprite.png') -2px -2px;
+}
+
+.toprated {background-color: #fff;}
+
+.toprated h2 {
+    font-size: 27px;
+    color: rgba(24, 180, 207, 255);
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 63px 0 53px;
+}
+
+.horizont {
+    display: inline-grid;
+    overflow: hidden;
+    grid-template-rows: 190px;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.horizont img:hover {
+    transform: scale(1.3);
+}
+
+.hothotels {height: 1680px;}
+
+.hothotels h2 {
+    text-transform: uppercase;
+    font-size: 27px;
+    color: rgba(24, 180, 207, 255);
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 51px;
+    padding-top: 60px;
+}
+
+.hotnews {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 259px 418px 418px 259px;
+    align-content: space-between;
+    justify-content: space-between;
+    row-gap: 43px;
+    column-gap: 60px;
+}
+
+.hotnews a {text-decoration: none;}
+
+.hotels h3 {
+    font-size: 18px;
+    color: rgba(53, 58, 61, 255);
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.hotels {
+    display: inline-grid;
+    background-color: #f9f7f7;
+    text-align: right;
+    font-weight: 600;
+    overflow: hidden;
+
+}
+.hotels img:hover {
+    transform: scale(1.1);
+}
+.hotels:hover {
+    background-color: #c9e1f9;
+}
+
+.caption {
+    color: rgba(91, 100, 105, 255);
+    display: grid;
+    align-items: center;
+    align-self: center;
+    font-size: 14px;
+    padding: 5%;
+    line-height: 160%;
+}
+
+
+.threecells {
+    grid-auto-flow: column;
+    grid-column: span 3;
+}
+
+.central { grid-column: span 2;}
+
+.small{ text-align: center;}
+
+.last { margin-left: -25px;}
+
+.bottom { background-color: #1d2124;}
+.footer {
+    display: grid;
+    grid-template-rows: 80px;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 255);
+    font-size: 13px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 255);
+}
+
+.buttomlogo {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.buttomicon {
+    width: 38px;
+    height: 24px;
+    background: url('../images/css_sprites.png') -2px -22px;
+    margin: 3px;
+}
+
+.buttomlioit {
+    width: 64px;
+    height: 16px;
+    background: url('../images/css_sprites.png') -2px -2px;
+}
+/*/////*/
+#toggle {
+    width: 100%;
+    text-align: center;
+    background-color: #f2f2f2;}
+
+#button {
+    display: inline-block;
+    background-color: #05ffa4;
+    width: 20px;
+    height: 20px;
+    border-radius: 5%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+    opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    text-align: center;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+#button:active {
+    background-color: #555;
+}
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+.site-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70px;
+    background: #1d2124;
+    text-transform: uppercase;
+    border-bottom: 1px solid #2b8b83;
+}
+.site-navbar a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 255);
+}
+.site-navbar a:hover{
+    color: #2b8b83;
+}
